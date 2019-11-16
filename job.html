@@ -25,12 +25,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 </style>
 <body class="w3-black">
-<!-- Icon Bar (Sidebar) -->
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="img/portrait2.jpg" style="width:100%">
-  <!-- Links -->
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -38,7 +37,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT ME</p>
   </a>
-  <a href="job.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="job.html" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-suitcase w3-xxlarge"></i>
     <p>EXPERIENCE</p>
   </a>
@@ -46,10 +45,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
   </a>
+
   <a href="hobby.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-picture-o w3-xxlarge"></i>
     <p>HOBBY</p>
   </a>
+
   <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
@@ -59,17 +60,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Page Content -->
 <main id="main">
+  <div  style="max-width:1000px; margin:auto">
 
-  <div class="w3-center">
-    <!-- Top info -->
-    <h1 class="lg-heading">Martin Hag</h1>
-    <p>Programmer and engineer.</p>
 
-    <img src="img/background.png" alt="img" height="auto" width="auto">
+  <!-- Top info -->
+  <h2 class="w3-text-light-grey" style="margin-top: 40px">Work experience</h2>
+  <hr style="width:1000px" class="w3-opacity">
+
+  <!-- Work experiences -->
+  <div class="w3-center" style="margin-top: 80px">
+    <h2 class="w3-text-light-grey" >Configura</h2>
+    <h5 class="w3-text-light-grey" >Summmer internship 2019</h5>
+    <p class="w3-text-light-grey">
+      I had the oppertunity to work at Configuras in Linköping for 8 weeks during the summer my 3:rd year in university.
+      The programming was in C++ using the toolkit Qt.
+    </p>
   </div>
+  <!-- End of work experiences -->
+
+  <!-- Other info -->
+  <h2 class="w3-text-light-grey" style="margin-top: 40px">Other</h2>
+  <hr style="width:1000px" class="w3-opacity">
+  <div class="w3-center" style="margin-top: 80px">
+    <h2 class="w3-text-light-grey" >Secretary</h2>
+    <h5 class="w3-text-light-grey" >Student division 2019/2020</h5>
+    <p class="w3-text-light-grey">
+      During my third year at the university I was had the positions of Secretary in the student division for MSc. in Media technology and Engineering. The work involed keeping track of internal documents, and writing protocol at meetings.
+    </p>
+  </div>
+  <div class="w3-center" style="margin-top: 80px">
+    <h2 class="w3-text-light-grey" >Safety representative</h2>
+    <h5 class="w3-text-light-grey" >Student division 2019/2020</h5>
+    <p class="w3-text-light-grey">
+      During my third year at the university I was had the positions of student representative in the student division for MSc. in Media technology and Engineering.
+    </p>
+  </div>
+  <!-- End of other info -->
+</div>
 
 </main>
-<!-- END PAGE CONTENT -->
-
 </body>
 </html>

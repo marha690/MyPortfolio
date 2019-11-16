@@ -241,7 +241,7 @@ main {
 
 .btn, .btn-dark, .btn-about, .btn-light {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-about:hover, .btn-light:hover {
@@ -253,8 +253,8 @@ main {
   color: #fff; }
 
 .btn-about {
-  background: white;
-  color: #000000;
+  background: #222;
+  color: #ffffff;
   text-align: center; }
 
 .btn-light {
