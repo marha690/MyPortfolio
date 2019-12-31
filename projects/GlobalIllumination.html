@@ -1,93 +1,143 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!doctype html>
 
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/projects/project1Head.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
+  <title>Global illumination - Martin Hag</title>
+  <meta name="description" content="Project from portfolio">
+  <meta name="author" content="Martin Hag">
 
-<!-- Header -->
-<div class="hero-image">
-  <div class="hero-text">
-    <h1>Global illumination with ray tracing</h1>
-    <p>Implemented in C++ with GLM</p>
-  </div>
-</div>
+  <link rel="stylesheet" href="projektTemplate.css?v=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content" >
-    <div class="w3-twothird" >
-      <h1>About this project</h1>
-      <h5 class="w3-padding-32">
-        This is a implementation of a basic Whitted ray-tracer.
-      </h5>
+  <body>
+    <!-- Hero  -->
+    <div class="headerInfo">
+      <img src="../img/projects/project1/project1Head.jpg" alt="Hero image" style="width:100vw; height: 300px;">
+      <div class="text">
+        <h1> Global illumation with raytracing</h1>
+        <h3> Whitted raytracer </h3>
+       </div>
+     </div>
 
-      <p class="w3-text-grey">
-        Ray tracing is a method used to make a global illumination model for a scene. The rays transport light around the scene by bouncing when hitting surfaces. How the ray behaves are depending on the surfaces which it hits, and the lights properties inside the ray changes when it hits a surface. The rays start inside the camera and goes through pixels inside the view plane. Those rays in the scene which is spawned from a ray going through a pixel in the view plane will only contribute to computations for that pixel.
-Since the computers power is limited the number of rays cannot be infinitive, and the Russian roulette method is used to limit them.
-      </p>
-    </div>
+     <!-- ABOUT THIS PROJECT -->
+     <div style="background-color: white;">
+       <div class="boxes">
+         <div class="box2" style="text-align: left;">
 
-    <div class="w3-third w3-center">
-      <img class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-left" src="../img/projects/project1img1.jpg" alt="Rendered image">
-    </div>
-  </div>
-</div>
+           <h2> About the project </h2>
 
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-    <!--  <img class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-left" src="../img/projects/test.jpg" alt="Rendered image"> -->
-    </div>
+           <h3> A basic whitted raytracer </h3>
 
-    <div class="w3-twothird">
+           <p style="color: gray">
+             This project is an implementation of a renderer with an global illumation model.
+             To make the global illumination a whitted raytracing method is used.
+             Whitted raytracing is an backward raytracer with a twist, at each hit, rays towards the ligthsource are spawned to help calculate the illumination equation.
+           </p>
+           <p style="color: gray">
+             Rays are limited to be inside a room which makes them unable to reach infinitive distance without an intersection.
+             At the intersection the rays behaviour are depending on the surface material, where different types exists.
+           </p>
+         </div>
+         <div class="box2" style="margin-top: auto; margin-bottom: auto;">
+           <img src="../img/projects/project1/project1.jpg" alt="Hero image" style="width:40vw;">
+         </div>
+       </div>
+     </div>
+     <!-- END OF ABOUT THIS PROJECT -->
 
 
-      <h5 class="w3-padding-32">In the project there are still things which is needed to be done.</h5>
+     <!-- SINGLE TEXT -->
+     <div style="color: black; background-color: lightgray;">
+       <div class="soloText">
+         <h2> Mimics the real world </h2>
+         <p>
+           To get a good result understanding the physics behind light is essensial.
+           For a photorealistic result the mathematics inside the renderer must be the same as for the light,
+           or close enough for us humans to not see a difference.
+         </p>
+         <p>
+           Since the comutational power is limited shortcuts has to be made, as limiting the number of rays and their bounces.
+           Some physical equations are changed for their approximated versions for faster calulation time.
+         </p>
+       </div>
+     </div>
+     <!-- END OF SINGLE TEXT -->
 
-      <h5>Exist right now</h5>
-      <ul>
-        <li>Lambertian and perfect mirrors</li>
-        <li>Supersampling</li>
-        <li>Spherical objects and obects from triangles</li>
-        <li>Russian roulette method to limit the rays</li>
-      </ul>
+     <!-- LIST AND MY THOUGHTS-->
+     <div style="background-color: white;">
+       <div class="boxes">
+         <!-- List -->
+         <div class="box2" style="text-align: left;">
+           <h2> What exists in this project?</h2>
+           <h3> Right now</h3>
+           <ul>
+             <li> Illumaition model by whitted raytracer method</li>
+             <li> Objects made by triangle meshes</li>
+             <li> Objects in forms of spheres by mathematical expressions</li>
+             <li> Lambertian, Oren nayar and perfect reflection materials</li>
+             <li> Russian roulette algorithm for limiting the rays</li>
+             <li> Supersampling for pixel rays </li>
+           </ul>
+           <h3> Possible improvements</h3>
+           <ul>
+             <li> Threading the render process</li>
+             <li> Class for materials</li>
+             <li> Simplify way to add new objects </li>
+             <li> Implement Photon mapping for decreased render time</li>
+           </ul>
+         </div>
+         <!-- My thoughts -->
+         <div class="box2">
+           <h2 style="text-align: center;">My thoughts </h2>
+           <p>
+             During this project I have learned about different methods used when programing a global renderer.
+             I havbe also learned more about how light behaves in the real world and what can be programmed and what has to be approximated.
+           </p>
+           <p>
+             The final result has some major drawbacks.
 
-      <h5>Not yet implemented</h5>
-      <ul>
-        <li>Material class for surfaces</li>
-        <li>Dynamic code to insert objects in the scene</li>
-        <li>Fix light equation</li>
-        <li>Refraction for transparent objects</li>
-      </ul>
+             Many bad decissions was made during the programming which was found out to late to be changed, example using double insted of float.
+             Some additions which is not implemented are classes for materials, right now they are hard coded.
+             The process is not threaded and there is no easy way to create new objects in the scene.
+             These things has to be fixed to create a renderer worth using.
+           </p>
+           <p>
+             The result might not be masterpiece, but the knowledge I got during the process made it well worth it.
+             Next time I need to create something similar I have a good understanding for what to change for a better result.
+           </p>
+         </div>
+       </div>
+     </div>
+     <!-- END OF LIST AND MY THOUGTS -->
 
-    </div>
-  </div>
-</div>
+     <!-- Three boxes information  -->
+     <div style="background-color: lightgray;">
+       <div class="boxes">
+         <div class="box" id="box1">
+           <h2> Language </h2>
+           <p>
+             The project was made in C++
+           </p>
+         </div>
+         <div class="box" id="box2">
+           <h2> Dependencies </h2>
+           <p>
+             Two external libraries was used. GLM for the mathematic and SFML to view the result in a viewport.
+           </p>
+         </div>
+         <div class="box" id="box3">
+           <h2> Involved people </h2>
+           <p>
+             This project was made by myself with help of teachers in the course TNCG15 at Linköpings university, 2019.
+           </p>
+         </div>
+       </div>
+     </div>
+     <!-- END OF Three boxes information  -->
+
+    <!--<script src="js/scripts.js"></script>-->
+  </body>
+</html>

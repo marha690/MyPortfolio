@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Face recognition - Martin Hag</title>
+  <meta name="description" content="Project from portfolio">
+  <meta name="author" content="Martin Hag">
+
+  <link rel="stylesheet" href="projektTemplate.css?v=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+  <body>
+
+    <!-- Hero  -->
+    <div class="headerInfo">
+        <img src="../img/projects/project2/headerImage.png" alt="img1" style="width:100vw; height: 300px;">
+      <div class="text">
+        <h1> Face recognition with eigenfaces </h1>
+        <h3> In images </h3>
+       </div>
+     </div>
+
+     <!-- ABOUT THIS PROJECT -->
+     <div style="background-color: white;">
+       <div class="boxes">
+         <div class="box2" style="text-align: left;">
+
+           <h2> Face detection  </h2>
+
+           <!-- <h3> Face detection  </h3> -->
+
+           <p style="color: gray">
+             To test the program images from the Caltech database of faces from 1999 is used.
+             The first step is to detect and isolate faces inside the images.
+           </p>
+           <p style="color: gray">
+             Our approach was to first make a face mask to find the face.
+             After that a eye map is combined for a safer detection and also as anchors for the image adjustments.
+             The images adjustments are scaling, rotatating and cropping so that only the face exists.
+             Color adjustments are also applied.
+           </p>
+         </div>
+         <div class="box2" style="margin-top: auto; margin-bottom: auto;">
+           <img src="../img/projects/project2/AllFaces.jpg" alt="img2" style="width:40vw;">
+         </div>
+       </div>
+     </div>
+     <!-- END OF ABOUT THIS PROJECT -->
+
+     <!-- ABOUT THIS PROJECT -->
+     <div style="background-color: white;">
+       <div class="boxes">
+         <div class="box2" style="margin-top: auto; margin-bottom: auto;">
+           <img src="../img/projects/project2/Match.jpg" alt="Hero image" style="width:40vw;">
+         </div>
+         <div class="box2" style="text-align: left;">
+
+           <h2> Face recognition </h2>
+
+           <!-- <h3> Face recognition </h3> -->
+
+           <p style="color: gray">
+             With the images prepared an database with eigenfaces are made.
+             In the database there are 16 different persons which has unique id's.
+             Every image in the database has the same id as the person inside that image.
+           </p>
+           <p style="color: gray">
+             To be able to match faces with an test image an principal component analyzis are used,
+             where the dimensions in the eigenfaces are made to represent faces best.
+           </p>
+         </div>
+       </div>
+     </div>
+     <!-- END OF ABOUT THIS PROJECT -->
+
+     <!-- SINGLE TEXT -->
+     <div style="color: black; background-color: lightgray;">
+       <div class="soloText">
+         <h2> Result </h2>
+         <p>
+           The result of the test with portrait photos with rotation +-5%, scaling +-10% and tone change +-30% was ??% correct matches.
+         </p>
+         <p>
+           The result of images with bad lightning, blurr and other irregularites was ??%.
+         </p>
+       </div>
+     </div>
+     <!-- END OF SINGLE TEXT -->
+
+     <!-- Three boxes information  -->
+     <div style="background-color: lightgray;">
+       <div class="boxes">
+         <div class="box" id="box1">
+           <h2> Language </h2>
+           <p>
+             The project was made in Matlab
+           </p>
+         </div>
+         <div class="box" id="box2">
+           <h2> Image Database </h2>
+           <p>
+           </p>
+           <p>
+             http://www.vision.caltech.edu/html-files/archive.html
+           </p>
+         </div>
+         <div class="box" id="box3">
+           <h2> Involed people </h2>
+           <p>
+             This project was made by me and Josefine Klintberg with the help of teachers in the course TNM067 at Linköpings university, 2019.
+           </p>
+         </div>
+       </div>
+     </div>
+     <!-- END OF Three boxes information  -->
+
+    <!--<script src="js/scripts.js"></script>-->
+  </body>
+</html>
