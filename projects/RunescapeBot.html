@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Computer game bot - Martin Hag</title>
+  <meta name="description" content="Project from portfolio">
+  <meta name="author" content="Martin Hag">
+
+  <link rel="stylesheet" href="projektTemplate.css?v=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+  <body>
+    <!-- Hero  -->
+    <div class="headerInfo">
+      <img src="../img/projects/OSRS/Head.jpg" alt="Hero image" style="width:100vw; height: 300px;">
+      <div class="text">
+        <h1> Bot for Oldschool runescape </h1>
+        <h3> Made with image processing </h3>
+       </div>
+     </div>
+
+
+     <!-- LIST AND MY THOUGHTS-->
+     <div style="background-color: white;">
+       <div class="boxes">
+
+         <!-- My thoughts -->
+         <div class="box2">
+           <h2 style="text-align: center;"> About the project </h2>
+
+           <p>
+             The purpose for this projekt is to make the computer to play a game for you.
+             To be able to do so, the program analyse images in the client and from those ckicks on objects and makes tasks in the game.
+           </p>
+           <p>
+             The program logs in an account by it self, play the account for a set time and then log out. Afterwards the program will wait for new tasks from the user.
+           </p>
+
+           <p>
+             The program is coded in C++ and uses windows internal functions to handle mouse movements. To analyse the images an image processing library called openCV is used.
+           </p>
+
+
+         </div>
+
+         <!-- List -->
+         <div class="box2" style="text-align: left;">
+           <h2> What is includeed in this project?</h2>
+           <h3> Implemented in code </h3>
+           <ul>
+             <li> Login account from username and password in an external text file </li>
+             <li> Automatically logs out accounts after bot ends </li>
+             <li> Alows user to set time the bot will be running </li>
+             <li> Finding images in inventory and bank </li>
+             <li> Finding images in the game world </li>
+             <li> Able to switch between interfaces inside the game GUI </li>
+             <li> Simple tasks for the bot to make in game </li>
+             <li> A virual class to inherit when making new bot tasks </li>
+           </ul>
+
+
+         </div>
+
+
+       </div>
+     </div>
+     <!-- END OF LIST AND MY THOUGTS -->
+
+
+     <!-- SINGLE TEXT -->
+     <div style="color: black; background-color: lightgray;">
+       <div class="soloText">
+         <h2> Image detection methods </h2>
+         <p>
+           The matching of object are made in two ways, depending on if the location of the image for the object is known or not.
+
+         </p>
+           <p>
+            With object in a fixed position, like in a inventory, the image in a square for that object is tested by a reference image stored in advance.
+           If the images has a difference from each other lower than a set threshold those are determined to be the same image.
+         </p>
+         <p>
+           The other method is used when the image location is unknown inside the cilent. A copy of the searched image is then iterated over the image inside the client and the best match is selected as a match,
+           if a threshold says so.
+         </p>
+
+       </div>
+     </div>
+     <!-- END OF SINGLE TEXT -->
+
+     <!-- Three boxes information  -->
+     <div style="background-color: lightgray;">
+       <div class="boxes">
+         <div class="box" id="box1">
+           <h2> Language </h2>
+           <p>
+             C++
+           </p>
+         </div>
+         <div class="box" id="box2">
+           <h2> Dependencies </h2>
+           <p>
+             OpenCV for image processing
+           </p>
+         </div>
+         <div class="box" id="box3">
+           <h2> Involved people </h2>
+           <p>
+             This project was made by me in my spare time
+           </p>
+         </div>
+       </div>
+     </div>
+     <!-- END OF Three boxes information  -->
+
+    <!--<script src="js/scripts.js"></script>-->
+  </body>
+</html>
